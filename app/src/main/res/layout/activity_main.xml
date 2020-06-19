@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/billAmountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:autoText="true"
+        android:fontFamily="sans-serif-black"
+        android:padding="5dp"
+        android:text="Bill Amount"
+        android:textAlignment="center"
+        android:textColor="#DD1212"
+        android:textColorHint="#FB2626"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioButton
+        android:id="@+id/oneSplit"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:text="One Person"
+        android:textColor="#232835"
+        app:layout_constraintStart_toEndOf="@+id/splitBill"
+        app:layout_constraintTop_toBottomOf="@+id/totalBillText" />
+
+    <RadioButton
+        android:id="@+id/twoSplit"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="Two Person"
+        android:textColor="#232835"
+        app:layout_constraintStart_toEndOf="@+id/splitBill"
+        app:layout_constraintTop_toBottomOf="@+id/oneSplit" />
+
+    <RadioButton
+        android:id="@+id/threeSplit"
+        android:layout_width="175dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="Three Person"
+        android:textColor="#232835"
+        app:layout_constraintStart_toEndOf="@+id/splitBill"
+        app:layout_constraintTop_toBottomOf="@+id/twoSplit" />
+
+    <RadioButton
+        android:id="@+id/fourSplit"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="Four Person"
+        android:textColor="#232835"
+        app:layout_constraintStart_toEndOf="@+id/splitBill"
+        app:layout_constraintTop_toBottomOf="@+id/threeSplit" />
+
+
+    <TextView
+        android:id="@+id/totalBillText"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:shadowColor="#423333"
+        android:text="1000"
+        android:textAlignment="center"
+        android:textColor="#232835"
+        app:layout_constraintStart_toEndOf="@+id/totalBill"
+        app:layout_constraintTop_toBottomOf="@+id/tipAmount" />
+
+    <Button
+        android:id="@+id/addTip"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:padding="5dp"
+        android:text="+"
+        android:textColor="#E91E63"
+        app:layout_constraintEnd_toStartOf="@+id/subTip"
+        app:layout_constraintStart_toEndOf="@+id/tipPercentText"
+        app:layout_constraintTop_toBottomOf="@+id/billAmountText" />
+
+
+    <TextView
+        android:id="@+id/tipPercent"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:text="Tip Percent"
+        android:textColor="#DD1212"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billAmountText" />
+
+    <TextView
+        android:id="@+id/tipPercentText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:text="15"
+        android:textColor="#232835"
+        app:layout_constraintStart_toEndOf="@+id/tipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/billAmountText" />
+
+    <TextView
+        android:id="@+id/tipAmount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:text="Tip Amount"
+        android:textColor="#DD1212"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercent" />
+
+    <TextView
+        android:id="@+id/tipAmountText"
+        android:layout_width="175dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:shadowColor="#423333"
+        android:text="100"
+        android:textAlignment="center"
+        android:textColor="#232835"
+        app:layout_constraintStart_toEndOf="@+id/tipAmount"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercent" />
+
+    <TextView
+        android:id="@+id/totalBill"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:text="Total "
+        android:textColor="#DD1212"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipAmount" />
+
+    <TextView
+        android:id="@+id/splitBill"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:text="Split Bill"
+        android:textColor="#DD1212"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalBill" />
+
+    <Button
+        android:id="@+id/subTip"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:text="-"
+        android:textColor="#009688"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/tipPercentText"
+        app:layout_constraintTop_toBottomOf="@+id/billAmountText" />
+
+    <CheckBox
+        android:id="@+id/checkTip"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="136dp"
+        android:padding="20dp"
+        android:text="Remember Tip Percent?"
+        android:textColor="#DD1212"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splitBill" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
